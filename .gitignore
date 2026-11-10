@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+4-Backend/uploads/*
+4-Backend/fotos-index.json
+.expo/
+dist/
+build/
+.gradle/
+.idea/
+local.properties
+*.log
+*.rar
+*.zip

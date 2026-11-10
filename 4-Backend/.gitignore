@@ -1,0 +1,5 @@
+.env
+node_modules/
+uploads/
+fotos-index.json
+fotos-index.*.tmp

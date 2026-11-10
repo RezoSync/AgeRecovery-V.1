@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#001B33">
+    <title>Age Recovery | Asistente virtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-layout">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Age Recovery, inicio">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span class="brand-name">Age Recovery</span>
+        </a>
+        <div class="topbar-context">
+          <span class="context-dot" aria-hidden="true"></span>
+          <span>Medicina estética</span>
+        </div>
+      </header>
+
+      <main class="chat-shell">
+        <section class="conversation" aria-label="Conversación">
+          <div class="conversation-heading">
+            <p class="eyebrow">CONSULTA</p>
+            <h1>¿En qué te puedo orientar?</h1>
+            <a class="booking-button" id="booking-button" href="#" target="_blank" rel="noopener noreferrer" hidden>
+              Agendar valoración
+            </a>
+          </div>
+
+          <aside class="transparency-notice" aria-label="Aviso importante">
+            Soy un asistente de IA. No sustituyo al médico. No compartas datos personales ni de salud.
+          </aside>
+          <p class="booking-error" id="booking-error" role="status" hidden>
+            No se pudo cargar el enlace de agenda.
+          </p>
+
+          <div class="messages" id="messages" aria-live="polite" aria-relevant="additions text">
+            <article class="message assistant-message">
+              <span class="message-avatar" aria-hidden="true">A</span>
+              <div class="message-content">
+                <p class="message-author">Age Recovery <span>Asistente virtual</span></p>
+                <p class="message-text">Hola. Puedo compartir información general sobre nuestros servicios y cuidados posteriores. Para dudas clínicas, consulta al médico.</p>
+              </div>
+            </article>
+            <div class="suggested-questions" id="suggested-questions" aria-label="Preguntas sugeridas">
+              <button type="button">¿Qué servicios ofrece Age Recovery?</button>
+              <button type="button">¿Cómo agendo una valoración?</button>
+              <button type="button">¿Cuál es el horario de atención?</button>
+              <button type="button">¿Qué es la bioestimulación facial?</button>
+              <button type="button">¿Qué cuidados se recomiendan después del ácido hialurónico?</button>
+            </div>
+          </div>
+          <p class="typing-indicator" id="typing-indicator" role="status" hidden>Escribiendo…</p>
+        </section>
+
+        <form class="composer" id="chat-form">
+          <label class="visually-hidden" for="message-input">Escribe tu mensaje</label>
+          <textarea
+            id="message-input"
+            name="message"
+            rows="1"
+            maxlength="2000"
+            placeholder="Escribe tu consulta..."
+            autocomplete="off"
+            required
+          ></textarea>
+          <button class="send-button" id="send-button" type="submit">
+            <span>Enviar</span>
+            <span class="send-arrow" aria-hidden="true">&#8599;</span>
+          </button>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
