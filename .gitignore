@@ -11,5 +11,8 @@ build/
 .idea/
 local.properties
 *.log
+*.respaldo.txt
 *.rar
 *.zip
+uploads/
+fotos-index.json
